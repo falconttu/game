@@ -4,30 +4,37 @@ using UnityEngine;
 
 public class PlayerMovementScript : MonoBehaviour
 {
-
-    public CharacterController player;
-
-    public float speed = 4f;
+    // Refrencing the RigidBody
+    Rigidbody rb;
+    float PlayerSpeed = 3f;
+    float JumpForce = 5f;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        rb = GetComponent<Rigidbody>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        // Movement
-        float horizontal = Input.GetAxisRaw("Horizontal");
-        float vertical = Input.GetAxisRaw("Vertical");
+        // Horizontal and Vertical Movement
+        float horizontal = Input.GetAxis("Horizontal");
+        float vertical = Input.GetAxis("Vertical");
 
-        Vector3 direction = new Vector3(horizontal, 0f, vertical).normalized;
+        rb.velocity = new Vector3(horizontal * PlayerSpeed, rb.velocity.y, vertical * PlayerSpeed);
 
-        // Check if the character is moving
-        if (direction.magnitude >= 0.1f)
+        // Players Jumping Mechanic
+        if (Input.GetKeyDown("space"))
         {
-            player.Move(direction * speed * Time.deltaTime);
+            rb.velocity = new Vector3(rb.velocity.x, JumpForce, rb.velocity.z);
         }
+
+        // Crouching/Stealth Mechanic
+        if (Input.GetKeyDown("ctrl"))
+        {
+            PlayerSpeed = 1f;
+        }
+        
     }
 }
