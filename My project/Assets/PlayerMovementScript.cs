@@ -7,7 +7,7 @@ public class PlayerMovementScript : MonoBehaviour
 
     public CharacterController player;
 
-    public float speed = 7f;
+    public float speed = 4f;
 
     // Start is called before the first frame update
     void Start()
