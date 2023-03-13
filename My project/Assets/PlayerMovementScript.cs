@@ -6,8 +6,8 @@ public class PlayerMovementScript : MonoBehaviour
 {
     // Refrencing the RigidBody
     Rigidbody rb;
-    float PlayerSpeed = 3f;
-    float JumpForce = 5f;
+    [SerializeField] float PlayerSpeed = 3f;
+    [SerializeField] float JumpForce = 5f;
 
     // Start is called before the first frame update
     void Start()
