@@ -11,7 +11,7 @@ public class PlayerMovementScript : MonoBehaviour
     [SerializeField] float JumpForce = 5f;
     [SerializeField] Transform Player;
     public CharacterController PlayerObj;
-
+    public float SmoothTurn = 0.1f;
     // Start is called before the first frame update
     void Start()
     {
