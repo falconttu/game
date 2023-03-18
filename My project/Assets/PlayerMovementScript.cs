@@ -10,7 +10,6 @@ public class PlayerMovementScript : MonoBehaviour
     [SerializeField] float PlayerSpeed = 3f;
     [SerializeField] float SprintSpeed;
     [SerializeField] float JumpForce = 5f;
-    [SerializeField] Transform Player;
 
     public CharacterController PlayerObj;
     public Transform cam;
