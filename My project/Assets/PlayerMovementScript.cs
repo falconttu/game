@@ -11,7 +11,9 @@ public class PlayerMovementScript : MonoBehaviour
     [SerializeField] float SprintSpeed;
     [SerializeField] float JumpForce = 5f;
     [SerializeField] Transform Player;
+
     public CharacterController PlayerObj;
+    public Transform cam;
 
     // Smooth Turning
     public float SmoothTurn = 0.1f;
@@ -33,11 +35,14 @@ public class PlayerMovementScript : MonoBehaviour
 
         if (direction.magnitude >= 0.1f)
         {
-            float targetAngle = Mathf.Atan2(direction.x, direction.y) * Mathf.Rad2Deg;
+            float targetAngle = Mathf.Atan2(direction.x, direction.y) * Mathf.Rad2Deg + cam.eulerAngles.y;
             float angle = Mathf.SmoothDampAngle(transform.eulerAngles.y, targetAngle, ref SmoothTurnVelocity, SmoothTurn);
             transform.rotation = Quaternion.Euler(0f, angle, 0f);
 
-            //PlayerObj.Move(direction * PlayerSpeed * Time.deltaTime);
+            
+            Vector3 moveDir = Quaternion.Euler(0f, targetAngle, 0f) * Vector3.forward;
+            PlayerObj.Move(moveDir.normalized * Time.deltaTime);
+
         }
 
         rb.velocity = new Vector3(horizontal * PlayerSpeed, rb.velocity.y, vertical * PlayerSpeed);
