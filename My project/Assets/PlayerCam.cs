@@ -15,7 +15,9 @@ public class PlayerCam : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        // Making the Cursor Invisible
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
     }
 
     // Update is called once per frame
@@ -33,18 +35,19 @@ public class PlayerCam : MonoBehaviour
         {
             PlayerObj.forward = Vector3.Slerp(PlayerObj.forward, InputDir.normalized, Time.deltaTime * RotationSpeed);
         }*/
-        SpeedControl();
+
+        
     }
 
     private void SpeedControl()
     {
-        Vector3 FlatVel = new Vector3(rb.velocity.x, 0f, rb.velocity.z);
+        /*Vector3 FlatVel = new Vector3(rb.velocity.x, 0f, rb.velocity.z);
 
         if (FlatVel.magnitude > PlayerSpeed)
         {
             Vector3 LimVel = FlatVel.normalized * PlayerSpeed;
             rb.velocity = new Vector3(LimVel.x, rb.velocity.y, LimVel.z);
-        }
+        }*/
 
     }
 }
