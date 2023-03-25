@@ -7,22 +7,14 @@ using UnityEditor.Experimental.GraphView;
 public class PlayerMovementScript : MonoBehaviour
 {
     // Refrencing the RigidBody
-    Rigidbody rb;
     [SerializeField] float PlayerSpeed = 5f;
 
     [Header("CharacterController")]
     public CharacterController controller;
-    public Transform Orientation;
     public Transform Cam;
     Vector3 MoveDir;
     float verticalInput;
     float horizontalInput;
-
-    [Header("GroundSettings")]
-    public float groundDrag;
-    public float PlayerHeight;
-    public LayerMask WhatIsGround;
-    bool grounded;
 
     [Header("SmoothTurning")]
     public float SmoothTurnTime = 0.1f;
@@ -33,24 +25,14 @@ public class PlayerMovementScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        rb = GetComponent<Rigidbody>();
     }
 
     // Update is called once per frame
     void Update()
     {
+
         // Horizontal and Vertical Movement
         MovementControl();
-
-        // Ground Checking
-        GroundChecking();
-
-
-
-
-
-
-
 
 
 
@@ -78,23 +60,6 @@ public class PlayerMovementScript : MonoBehaviour
             Vector3 MoveDir = Quaternion.Euler(0f, TargetAngle, 0f) * Vector3.forward;
             controller.Move(MoveDir.normalized * PlayerSpeed * Time.deltaTime);
         }
-    }
-
-    private void GroundChecking()
-    {
-        grounded = Physics.Raycast(transform.position, Vector3.down, PlayerHeight * 0.5f + 0.2f, WhatIsGround);
-
-        if (grounded)
-        {
-            rb.drag = groundDrag;
-       
-        }
-
-        else
-        {
-            rb.drag = 0;
-        }
-
     }
 
 }
