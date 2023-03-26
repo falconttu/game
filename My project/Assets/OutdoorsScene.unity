@@ -13737,7 +13737,7 @@ Light:
   m_BounceIntensity: 3
   m_ColorTemperature: 2200
   m_UseColorTemperature: 1
-  m_BoundingSphereOverride: {x: 3.2e-44, y: 1, z: 1, w: 0}
+  m_BoundingSphereOverride: {x: 0, y: 7.43868e-39, z: 9.78048e-39, w: 4.125964e+29}
   m_UseBoundingSphereOverride: 0
   m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0.0125
@@ -21594,14 +21594,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c4bcfc15d828ece46aa52e86a2191dc2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PlayerSpeed: 3
-  controller: {fileID: 1335438980}
-  Cam: {fileID: 0}
-  MoveDir: {x: 0, y: 0, z: 0}
-  verticalInput: 0
-  horizontalInput: 0
-  SmoothTurnTime: 0.1
-  SmoothTurnVelocity: 0
 --- !u!143 &1335438980
 CharacterController:
   m_ObjectHideFlags: 0
@@ -24823,7 +24815,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1533075763}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.931765, y: -0.23094058, z: 5.1145134}
+  m_LocalPosition: {x: 0.028, y: 0.354, z: 0.4167}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -49417,7 +49409,7 @@ Light:
   m_BounceIntensity: 3
   m_ColorTemperature: 2200
   m_UseColorTemperature: 1
-  m_BoundingSphereOverride: {x: 0, y: 9.1835e-41, z: 1.8e-43, w: 4.8051295e+30}
+  m_BoundingSphereOverride: {x: 0, y: 7.43868e-39, z: 9.78048e-39, w: 1.8093146e+29}
   m_UseBoundingSphereOverride: 0
   m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0.0125
