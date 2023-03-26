@@ -51561,6 +51561,8 @@ GameObject:
   m_Component:
   - component: {fileID: 2422828412772432827}
   - component: {fileID: 5698635018815051457}
+  - component: {fileID: 5698635018815051459}
+  - component: {fileID: 5698635018815051458}
   m_Layer: 0
   m_Name: The Adventurer Blake
   m_TagString: Untagged
@@ -53537,6 +53539,42 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!143 &5698635018815051458
+CharacterController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1712709546600876456}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Height: 2
+  m_Radius: 0.5
+  m_SlopeLimit: 45
+  m_StepOffset: 0.3
+  m_SkinWidth: 0.08
+  m_MinMoveDistance: 0.001
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &5698635018815051459
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1712709546600876456}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2493863b245fb68419b796f458c1c1ce, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PlayerController: {fileID: 5698635018815051458}
+  RotationSpeed: 10
+  cam: {fileID: 0}
+  SmoothTurnTime: 0.1
+  gravity: -9.81
+  FollowCamera: {fileID: 0}
 --- !u!4 &5728420208817895954
 Transform:
   m_ObjectHideFlags: 0
@@ -54095,8 +54133,6 @@ GameObject:
   m_Component:
   - component: {fileID: 8904818059510008668}
   - component: {fileID: 7868946362281498154}
-  - component: {fileID: 8904818059510008669}
-  - component: {fileID: 8904818059510008670}
   m_Layer: 0
   m_Name: Blake
   m_TagString: Untagged
@@ -60261,36 +60297,6 @@ Transform:
   m_Father: {fileID: 2422828412772432827}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!143 &8904818059510008669
-CharacterController:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6851585106644301678}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Height: 0.0049095857
-  m_Radius: 0.009880855
-  m_SlopeLimit: 45
-  m_StepOffset: 0.3
-  m_SkinWidth: 0.08
-  m_MinMoveDistance: 0.001
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &8904818059510008670
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6851585106644301678}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0426b44de1d1b17409d6dac6c628f15d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &9056647947680412571
 GameObject:
   m_ObjectHideFlags: 0
