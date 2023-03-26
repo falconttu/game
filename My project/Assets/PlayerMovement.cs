@@ -5,7 +5,7 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {
     public CharacterController PlayerController;
-    private float speed = 6f;
+    public float speed = 6f;
 
     [SerializeField]
     private float RotationSpeed = 10f;
@@ -35,7 +35,7 @@ public class PlayerMovement : MonoBehaviour
         float HorizontalInput = Input.GetAxis("Horizontal");
         float VerticalInput = Input.GetAxis("Vertical");
 
-        Vector3 MoveInput = new Vector3(HorizontalInput, 0, VerticalInput);
+        Vector3 MoveInput = Quaternion.Euler(0, FollowCamera.transform.eulerAngles.y, 0) * new Vector3(HorizontalInput, 0, VerticalInput);
         Vector3 MoveDirection = MoveInput.normalized;
 
         if (MoveDirection != Vector3.zero)
