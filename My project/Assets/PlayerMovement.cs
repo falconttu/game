@@ -15,10 +15,8 @@ public class PlayerMovement : MonoBehaviour
 
     [SerializeField]
     private float gravity = -9.81f;
-    private float GravityMultiply = 3.0f;
 
-    private float velocity;
-    private Vector3 Direction;
+    private Vector3 velocity;
 
     [SerializeField]
     private Camera FollowCamera;
@@ -31,6 +29,12 @@ public class PlayerMovement : MonoBehaviour
 
     // Update is called once per frame
     void Update()
+    {
+        Move();
+        Gravity();
+    }
+
+    private void Move()
     {
         float HorizontalInput = Input.GetAxis("Horizontal");
         float VerticalInput = Input.GetAxis("Vertical");
@@ -45,5 +49,11 @@ public class PlayerMovement : MonoBehaviour
         }
 
         PlayerController.Move(MoveDirection * speed * Time.deltaTime);
+    }
+
+    private void Gravity()
+    {
+        velocity.y += gravity * Time.deltaTime;
+        PlayerController.Move(velocity * Time.deltaTime);
     }
 }
