@@ -20,7 +20,7 @@ public class Torch_toggle : MonoBehaviour
     {
         if (SphereCollider.isTrigger)
         {
-            if (Input.GetKeyDown(KeyCode.Space))
+            if (Input.GetKeyDown(KeyCode.E))
             {
                 ParticleSystem.Play();
                 PointLight.enabled = true;
