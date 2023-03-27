@@ -11,8 +11,6 @@ public class Torch_toggle : MonoBehaviour
     public Light PointLight;
     public AudioSource AudioSource;
 
-    public bool InCollider = false;
-
     void Start()
     {
 
@@ -21,26 +19,15 @@ public class Torch_toggle : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        // Do something when triggered
-        OnCollisionEnter(SphereCollider);
-    }
-
-    private void OnCollisionEnter(SphereCollider sphereCollider)
-    {
-        if (sphereCollider.gameObject.tag == "Player")
-        {
-            InCollider = true;
-
-            if (InCollider == true)
+       if(SphereCollider.isTrigger == true)
+       {
+            if (Input.GetKeyDown(KeyCode.E))
             {
-                if (Input.GetKeyDown(KeyCode.E))
-                {
-                    ParticleSystem.Play();
-                    PointLight.enabled = true;
-                    AudioSource.Play();
-                }
-
+                ParticleSystem.Play();
+                PointLight.enabled = true;
+                AudioSource.Play();
             }
-        }
+
+       }
     }
 }
