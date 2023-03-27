@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
+  m_IndirectSpecularColor: {r: 747.31055, g: 821.18555, b: 876.4385, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -2600,7 +2600,7 @@ Light:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 157207112}
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 10
   m_Type: 1
   m_Shape: 0
@@ -13768,7 +13768,7 @@ Light:
   m_BounceIntensity: 3
   m_ColorTemperature: 2200
   m_UseColorTemperature: 1
-  m_BoundingSphereOverride: {x: 2.7e-44, y: 1.7854e-41, z: 1.02e-43, w: 0}
+  m_BoundingSphereOverride: {x: 4.012e-42, y: 1.05e-43, z: 0, w: 0}
   m_UseBoundingSphereOverride: 0
   m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0.0125
@@ -42673,7 +42673,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 3807f56004699b04d8a5fe0aae9fa6e3, type: 3}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 0.8
   m_Pitch: 1
   Loop: 1
@@ -47582,6 +47582,7 @@ MonoBehaviour:
   ParticleSystem: {fileID: 1920894164}
   SphereCollider: {fileID: 1920894166}
   PointLight: {fileID: 878970750}
+  AudioSource: {fileID: 1920894162}
 --- !u!135 &1920894166
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -49506,7 +49507,7 @@ Light:
   m_BounceIntensity: 3
   m_ColorTemperature: 2200
   m_UseColorTemperature: 1
-  m_BoundingSphereOverride: {x: 4.8e-44, y: 0, z: 0, w: NaN}
+  m_BoundingSphereOverride: {x: 1.02e-43, y: 0, z: 0, w: NaN}
   m_UseBoundingSphereOverride: 0
   m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0.0125
@@ -51768,6 +51769,7 @@ GameObject:
   - component: {fileID: 5698635018815051459}
   - component: {fileID: 5698635018815051458}
   - component: {fileID: 5698635018815051460}
+  - component: {fileID: 5698635018815051461}
   m_Layer: 0
   m_Name: The Adventurer Blake
   m_TagString: Player
@@ -53704,10 +53706,10 @@ Animator:
   m_GameObject: {fileID: 1712709546600876456}
   m_Enabled: 1
   m_Avatar: {fileID: 9000000, guid: 027f00c86c565a44f865fc7c749b99e5, type: 3}
-  m_Controller: {fileID: 9100000, guid: 636b0ea5d0cfd23439fb1fb8a40fca7b, type: 2}
+  m_Controller: {fileID: 9100000, guid: 93523ba6073aef04c920a9dd3f821860, type: 2}
   m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
+  m_UpdateMode: 1
+  m_ApplyRootMotion: 1
   m_LinearVelocityBlending: 0
   m_StabilizeFeet: 0
   m_WarningMessage: 
@@ -53715,6 +53717,19 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &5698635018815051461
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1712709546600876456}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 11bdb31dd48a23f42bfcff31498778a1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animator: {fileID: 5698635018815051460}
 --- !u!4 &5728420208817895954
 Transform:
   m_ObjectHideFlags: 0
@@ -60121,7 +60136,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 3807f56004699b04d8a5fe0aae9fa6e3, type: 3}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 1
@@ -60261,6 +60276,7 @@ MonoBehaviour:
   ParticleSystem: {fileID: 8617686735380372972}
   SphereCollider: {fileID: 8619035618689784741}
   PointLight: {fileID: 2042101340}
+  AudioSource: {fileID: 8619035618689784740}
 --- !u!4 &8701955896998174310
 Transform:
   m_ObjectHideFlags: 0

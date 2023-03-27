@@ -10,6 +10,7 @@ public class Torch_toggle : MonoBehaviour
     public ParticleSystem ParticleSystem;
     public SphereCollider SphereCollider;
     public Light PointLight;
+    public AudioSource AudioSource;
     void Start()
     {
 
@@ -24,6 +25,7 @@ public class Torch_toggle : MonoBehaviour
             {
                 ParticleSystem.Play();
                 PointLight.enabled = true;
+                AudioSource.Play();
             }
         }
     }
