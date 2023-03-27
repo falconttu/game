@@ -2,7 +2,6 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Experimental.GlobalIllumination;
-
 public class Torch_toggle : MonoBehaviour
 {
     // Start is called before the first frame update
@@ -11,6 +10,9 @@ public class Torch_toggle : MonoBehaviour
     public SphereCollider SphereCollider;
     public Light PointLight;
     public AudioSource AudioSource;
+
+    public bool InCollider = false;
+
     void Start()
     {
 
@@ -19,15 +21,26 @@ public class Torch_toggle : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (SphereCollider.isTrigger)
+        // Do something when triggered
+        OnCollisionEnter(SphereCollider);
+    }
+
+    private void OnCollisionEnter(SphereCollider sphereCollider)
+    {
+        if (sphereCollider.gameObject.tag == "Player")
         {
-            if (Input.GetKeyDown(KeyCode.E))
+            InCollider = true;
+
+            if (InCollider == true)
             {
-                ParticleSystem.Play();
-                PointLight.enabled = true;
-                AudioSource.Play();
+                if (Input.GetKeyDown(KeyCode.E))
+                {
+                    ParticleSystem.Play();
+                    PointLight.enabled = true;
+                    AudioSource.Play();
+                }
+
             }
         }
     }
-
 }
