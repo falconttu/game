@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 747.31445, g: 821.19775, b: 876.43896, a: 1}
+  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -2600,7 +2600,7 @@ Light:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 157207112}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 10
   m_Type: 1
   m_Shape: 0
@@ -3342,6 +3342,7 @@ MonoBehaviour:
   m_Script: {fileID: 1673460980}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_Entries: []
 --- !u!4 &175951291
 Transform:
   m_ObjectHideFlags: 19
@@ -13717,7 +13718,7 @@ Light:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 878970747}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 10
   m_Type: 2
   m_Shape: 0
@@ -13767,7 +13768,7 @@ Light:
   m_BounceIntensity: 3
   m_ColorTemperature: 2200
   m_UseColorTemperature: 1
-  m_BoundingSphereOverride: {x: 0, y: -5.368617e-37, z: 7.02e-43, w: 2.5039345e+37}
+  m_BoundingSphereOverride: {x: 2.7e-44, y: 1.7854e-41, z: 1.02e-43, w: 0}
   m_UseBoundingSphereOverride: 0
   m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0.0125
@@ -18434,7 +18435,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1217019373}
   m_LocalRotation: {x: -0, y: -0.7071068, z: 0.7071068, w: 0}
-  m_LocalPosition: {x: 2.496, y: 6.62, z: 1.075}
+  m_LocalPosition: {x: 2.496, y: 6.609, z: 1.11}
   m_LocalScale: {x: 1, y: 1.5252773, z: 1.1085961}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -23094,6 +23095,7 @@ MonoBehaviour:
   m_Script: {fileID: 1673460980}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_Entries: []
 --- !u!4 &1273559284
 Transform:
   m_ObjectHideFlags: 19
@@ -42681,7 +42683,7 @@ AudioSource:
   Priority: 128
   DopplerLevel: 1
   MinDistance: 1
-  MaxDistance: 5
+  MaxDistance: 1.000001
   Pan2D: 0
   rolloffMode: 2
   BypassEffects: 0
@@ -42718,8 +42720,8 @@ AudioSource:
       inWeight: 0
       outWeight: 0
     - serializedVersion: 3
-      time: 0.9194641
-      value: 0
+      time: 0.7722473
+      value: 0.016357422
       inSlope: -0.20007975
       outSlope: -0.20007975
       tangentMode: 0
@@ -42863,7 +42865,7 @@ ParticleSystem:
   emitterVelocityMode: 1
   looping: 1
   prewarm: 0
-  playOnAwake: 1
+  playOnAwake: 0
   useUnscaledTime: 0
   autoRandomSeed: 1
   startDelay:
@@ -49454,7 +49456,7 @@ Light:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2042101338}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 10
   m_Type: 2
   m_Shape: 0
@@ -49504,7 +49506,7 @@ Light:
   m_BounceIntensity: 3
   m_ColorTemperature: 2200
   m_UseColorTemperature: 1
-  m_BoundingSphereOverride: {x: 0, y: 2.8e-44, z: 1e-45, w: 1.6114932e-38}
+  m_BoundingSphereOverride: {x: 4.8e-44, y: 0, z: 0, w: NaN}
   m_UseBoundingSphereOverride: 0
   m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0.0125
