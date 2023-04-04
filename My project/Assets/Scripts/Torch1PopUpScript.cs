@@ -8,11 +8,6 @@ public class Torch1PopUpScript : MonoBehaviour
     public GameObject Torch1PopUp;
     public SphereCollider SphereCollider;
 
-
-    void Update()
-    {
-        OnTriggerEnter(SphereCollider);
-    }
     private void OnTriggerEnter(SphereCollider SphereCollider)
     {
         if (SphereCollider.isTrigger)
