@@ -3322,7 +3322,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 175951291}
-  - component: {fileID: 175951290}
   m_Layer: 0
   m_Name: SceneIDMap
   m_TagString: Untagged
@@ -3330,19 +3329,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &175951290
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 175951289}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 1673460980}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Entries: []
 --- !u!4 &175951291
 Transform:
   m_ObjectHideFlags: 19
@@ -13768,7 +13754,7 @@ Light:
   m_BounceIntensity: 3
   m_ColorTemperature: 2200
   m_UseColorTemperature: 1
-  m_BoundingSphereOverride: {x: 2e-44, y: NaN, z: 7.58e-43, w: 2.28e-42}
+  m_BoundingSphereOverride: {x: 1.4e-44, y: 1.2347e-41, z: 1.02e-43, w: 0}
   m_UseBoundingSphereOverride: 0
   m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0.0125
@@ -23075,7 +23061,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1273559284}
-  - component: {fileID: 1273559283}
   m_Layer: 0
   m_Name: SceneIDMap
   m_TagString: Untagged
@@ -23083,19 +23068,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1273559283
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1273559282}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 1673460980}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Entries: []
 --- !u!4 &1273559284
 Transform:
   m_ObjectHideFlags: 19
@@ -28405,20 +28377,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1663812064}
   m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
---- !u!115 &1673460980
-MonoScript:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: 
-  serializedVersion: 5
-  m_Script: 
-  m_DefaultReferences: {}
-  m_Icon: {fileID: 0}
-  m_ExecutionOrder: 0
-  m_ClassName: SceneObjectIDMapSceneAsset
-  m_Namespace: UnityEngine.Rendering.HighDefinition
 --- !u!1 &1678714718
 GameObject:
   m_ObjectHideFlags: 0
@@ -28921,8 +28879,6 @@ GameObject:
   - component: {fileID: 1714724625}
   - component: {fileID: 1714724624}
   - component: {fileID: 1714724623}
-  - component: {fileID: 1714724622}
-  - component: {fileID: 1714724621}
   m_Layer: 0
   m_Name: TinyFlames 2
   m_TagString: Untagged
@@ -28946,35 +28902,6 @@ Transform:
   m_Father: {fileID: 1798144026}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: -97.619, y: 0, z: 0}
---- !u!114 &1714724621
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1714724619}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 505fe136e8b7dcd46971a7f16b025efe, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ParticleSystem: {fileID: 1714724625}
-  Collider: {fileID: 1714724622}
-  PointLight: {fileID: 1852339321}
-  AudioSource: {fileID: 1714724623}
---- !u!135 &1714724622
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1714724619}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.6
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!82 &1714724623
 AudioSource:
   m_ObjectHideFlags: 0
@@ -47914,8 +47841,6 @@ GameObject:
   - component: {fileID: 1920894164}
   - component: {fileID: 1920894163}
   - component: {fileID: 1920894162}
-  - component: {fileID: 1920894166}
-  - component: {fileID: 1920894165}
   m_Layer: 0
   m_Name: TinyFlames (1)
   m_TagString: Untagged
@@ -52844,35 +52769,6 @@ ParticleSystem:
         m_PostInfinity: 2
         m_RotationOrder: 4
     vectorLabel1_3: W
---- !u!114 &1920894165
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1920894159}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 505fe136e8b7dcd46971a7f16b025efe, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ParticleSystem: {fileID: 1920894164}
-  Collider: {fileID: 1920894166}
-  PointLight: {fileID: 878970750}
-  AudioSource: {fileID: 1920894162}
---- !u!135 &1920894166
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1920894159}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.6
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1924241544
 GameObject:
   m_ObjectHideFlags: 0
@@ -54881,7 +54777,7 @@ Light:
   m_BounceIntensity: 3
   m_ColorTemperature: 2200
   m_UseColorTemperature: 1
-  m_BoundingSphereOverride: {x: 0, y: 3.4e-44, z: 0, w: 1e-45}
+  m_BoundingSphereOverride: {x: 0, y: 3.4e-44, z: 0, w: 1.2316289e-37}
   m_UseBoundingSphereOverride: 0
   m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0.0125
@@ -57751,6 +57647,7 @@ GameObject:
   - component: {fileID: 8417139502307341277}
   - component: {fileID: 8171139771953510039}
   - component: {fileID: 8417139502307341278}
+  - component: {fileID: 8417139502307341279}
   m_Layer: 0
   m_Name: Torch 1
   m_TagString: Untagged
@@ -60799,11 +60696,27 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2444884272742314536}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 0.09362588, y: 0.08689764, z: 0.104548596}
   m_Center: {x: -0.009098053, y: 0.0009985835, z: -0.049112916}
+--- !u!114 &8417139502307341279
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2444884272742314536}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 505fe136e8b7dcd46971a7f16b025efe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ParticleSystem: {fileID: 8617686735380372972}
+  Collider: {fileID: 8417139502307341278}
+  PointLight: {fileID: 2042101340}
+  AudioSource: {fileID: 8619035618689784740}
 --- !u!1 &8438887308208549647
 GameObject:
   m_ObjectHideFlags: 0
@@ -60848,7 +60761,6 @@ GameObject:
   - component: {fileID: 8617686735380372972}
   - component: {fileID: 8619035618689784738}
   - component: {fileID: 8619035618689784740}
-  - component: {fileID: 8619035618689784742}
   m_Layer: 0
   m_Name: TinyFlames
   m_TagString: Untagged
@@ -65851,22 +65763,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &8619035618689784742
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8457430673855486454}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 505fe136e8b7dcd46971a7f16b025efe, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ParticleSystem: {fileID: 8617686735380372972}
-  Collider: {fileID: 8417139502307341278}
-  PointLight: {fileID: 2042101340}
-  AudioSource: {fileID: 8619035618689784740}
 --- !u!4 &8701955896998174310
 Transform:
   m_ObjectHideFlags: 0

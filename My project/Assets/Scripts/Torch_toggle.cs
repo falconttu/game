@@ -14,26 +14,23 @@ public class Torch_toggle : MonoBehaviour
 
     void Start()
     {
-        Collider.isTrigger = false;
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(Collider.isTrigger)
-        {
-            if (Input.GetKeyDown(KeyCode.E))
-            {
-                ParticleSystem.Play();
-                PointLight.enabled = true;
-                AudioSource.Play();
-            }
-        }
+
+
         
     }
 
     private void OnTriggerStay(Collider Collider)
     {
-        Collider.isTrigger = true;
+        if (Input.GetKeyDown(KeyCode.E))
+        {
+            ParticleSystem.Play();
+            PointLight.enabled = true;
+            AudioSource.Play();
+        }
     }
 }
