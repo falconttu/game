@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 747.3154, g: 821.20166, b: 876.43896, a: 1}
+  m_IndirectSpecularColor: {r: 745.8916, g: 819.6138, b: 874.8618, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -13754,7 +13754,7 @@ Light:
   m_BounceIntensity: 3
   m_ColorTemperature: 2200
   m_UseColorTemperature: 1
-  m_BoundingSphereOverride: {x: 1.4e-44, y: 1.2347e-41, z: 1.02e-43, w: 0}
+  m_BoundingSphereOverride: {x: 0, y: NaN, z: 0, w: 0}
   m_UseBoundingSphereOverride: 0
   m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0.0125
@@ -24115,6 +24115,8 @@ GameObject:
   - component: {fileID: 1403529240}
   - component: {fileID: 1403529239}
   - component: {fileID: 1403529238}
+  - component: {fileID: 1403529241}
+  - component: {fileID: 1403529242}
   m_Layer: 0
   m_Name: Torch 2
   m_TagString: Untagged
@@ -24188,6 +24190,35 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
+--- !u!65 &1403529241
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1403529237}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.08642823, y: 0.07516998, z: 0.07534}
+  m_Center: {x: 0.00032049717, y: -0.0018673361, z: -0.034508683}
+--- !u!114 &1403529242
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1403529237}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 505fe136e8b7dcd46971a7f16b025efe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ParticleSystem: {fileID: 1920894164}
+  Collider: {fileID: 1403529241}
+  PointLight: {fileID: 878970750}
+  AudioSource: {fileID: 1920894162}
 --- !u!1 &1405837215
 GameObject:
   m_ObjectHideFlags: 0
@@ -36653,7 +36684,7 @@ GameObject:
   - component: {fileID: 1852339321}
   - component: {fileID: 1852339320}
   m_Layer: 0
-  m_Name: Point Light2
+  m_Name: Point Light3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -36853,7 +36884,7 @@ Light:
   m_BounceIntensity: 3
   m_ColorTemperature: 2200
   m_UseColorTemperature: 1
-  m_BoundingSphereOverride: {x: 0, y: 3.5e-44, z: 1e-45, w: 1.6114932e-38}
+  m_BoundingSphereOverride: {x: 8e-44, y: 0, z: 0, w: 0}
   m_UseBoundingSphereOverride: 0
   m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0.0125
@@ -54777,7 +54808,7 @@ Light:
   m_BounceIntensity: 3
   m_ColorTemperature: 2200
   m_UseColorTemperature: 1
-  m_BoundingSphereOverride: {x: 0, y: 3.4e-44, z: 0, w: 1.2316289e-37}
+  m_BoundingSphereOverride: {x: 0, y: 3.92e-43, z: 0, w: 1e-45}
   m_UseBoundingSphereOverride: 0
   m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0.0125
