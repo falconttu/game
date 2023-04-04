@@ -13,14 +13,15 @@ public class Torch_toggle : MonoBehaviour
 
     void Start()
     {
-
+        SphereCollider.isTrigger = false;
     }
 
     // Update is called once per frame
     void Update()
     {
-       if(SphereCollider.isTrigger == true)
+       if(SphereCollider.isTrigger)
        {
+            Debug.Log("Player is in range of torch");
             if (Input.GetKeyDown(KeyCode.E))
             {
                 ParticleSystem.Play();
@@ -29,5 +30,10 @@ public class Torch_toggle : MonoBehaviour
             }
 
        }
+    }
+
+    private void OnTriggerEnter(Collider SphereCollider)
+    {
+            SphereCollider.isTrigger = true;
     }
 }
