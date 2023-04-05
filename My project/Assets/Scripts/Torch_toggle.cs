@@ -28,7 +28,7 @@ public class Torch_toggle : MonoBehaviour
     {
         if(Player_in_Range)
         {
-           if (Torch_on == false)
+           if (!Torch_on)
            {
                 if (Input.GetKeyDown(KeyCode.E))
                 {
